@@ -26,6 +26,8 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 
 ### circle.svg
 
+The `circle.svg` redraws itself when the page is resized, so it's always looking smart.
+
 ```
 <embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
