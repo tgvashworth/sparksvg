@@ -20,6 +20,14 @@ SVG sparklines, like [this one](http://sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,
 
 ![Example Bar SVG](http://i.phuu.net/Ly4g/Screen%20Shot%202013-01-06%20at%2012.52.59.png)
 
+### circle.svg
+
+```
+<embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0"></embed>
+```
+
+![Example Circle SVG](http://i.phuu.net/Lz72/Screen%20Shot%202013-01-06%20at%2019.36.30.png)
+
 ## License
 
 Copyright (c) 2012 Stuart Langridge & Tom Ashworth
