@@ -1,6 +1,6 @@
 # Spark SVG — [sparksvg.me](http://sparksvg.me)
 
-![OMG Sparklines](http://i.phuu.net/LzSo/Screen%20Shot%202013-01-06%20at%2020.54.18.png)
+![OMG Sparklines](http://i.phuu.net/Lz7N/Screen%20Shot%202013-01-06%20at%2021.03.15.png)
 
 Mothereffin' SVG sparklines.
 
