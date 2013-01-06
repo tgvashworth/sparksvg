@@ -4,11 +4,21 @@ SVG sparklines, like [this one](http://sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,
 
 ## Basic usage
 
+### line.svg
+
 ```
 <embed src="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
-![Example Spark SVG](http://i.phuu.net/Ly00/Screen%20Shot%202013-01-06%20at%2012.09.42.png)
+![Example Line SVG](http://i.phuu.net/Ly00/Screen%20Shot%202013-01-06%20at%2012.09.42.png)
+
+### bar.svg
+
+```
+<embed src="//sparksvg.me/bar.svg?0,4,7,10,8,12,9,7,3,0"></embed>
+```
+
+![Example Bar SVG](http://i.phuu.net/Ly4g/Screen%20Shot%202013-01-06%20at%2012.52.59.png)
 
 ## License
 
