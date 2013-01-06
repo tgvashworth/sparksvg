@@ -8,6 +8,8 @@ SVG sparklines, like [this one](http://sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,
 <embed src="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
+![Example Spark SVG](http://i.phuu.net/Ly00/Screen%20Shot%202013-01-06%20at%2012.09.42.png)
+
 ## License
 
 Copyright (c) 2012 Stuart Langridge & Tom Ashworth
