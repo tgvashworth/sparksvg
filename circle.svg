@@ -15,7 +15,7 @@
       clearTimeout(timeout);
       timeout = setTimeout(function () {
         var elem = document.getElementsByTagName("svg")[0];
-        while (elem.firstChild) { elem.removeChild(elem.firstChild); }
+        while(elem.firstChild) { elem.removeChild(elem.firstChild); }
         draw();
       }, 250);
     }
@@ -30,7 +30,7 @@
       parts = parts.map(scale.bind(null, max, min));
       var div = 100 / parts.length,
           divInPx = elem.clientWidth / parts.length,
-          heightR = elem.clientHeight / 2,
+          heightR = (elem.clientHeight - 2) / 2,
           maxR = divInPx > heightR ? heightR : divInPx;
           cy = 50;
       for (var i=0; i < parts.length; i++) {
