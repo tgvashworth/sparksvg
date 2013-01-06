@@ -1,8 +1,10 @@
-![OMG Sparklines](http://i.phuu.net/LzSo/Screen%20Shot%202013-01-06%20at%2020.54.18.png)
-
 # Spark SVG — [sparksvg.me](http://sparksvg.me)
 
-SVG sparklines, like [this one](http://sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0). Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines).
+![OMG Sparklines](http://i.phuu.net/LzSo/Screen%20Shot%202013-01-06%20at%2020.54.18.png)
+
+Mothereffin' SVG sparklines.
+
+Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines), based on an idea from [Jeremy Keith](http://adactio.com/journal/5941/).
 
 ## Basic usage
 
