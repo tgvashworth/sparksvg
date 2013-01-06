@@ -1,11 +1,11 @@
 # Spark SVG
 
-SVG sparklines. Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines).
+SVG sparklines, like [this one](//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0). Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines).
 
 ## Basic usage
 
 ```
-<embed src="line.svg?0,4,7,10,8,12,9,7,3,0"></embed>
+<embed src="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
 ## License
