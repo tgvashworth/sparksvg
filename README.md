@@ -1,4 +1,4 @@
-# SVG Sparkline
+# Spark SVG
 
 SVG sparklines. Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines).
 
