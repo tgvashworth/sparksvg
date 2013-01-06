@@ -17,11 +17,11 @@
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
       parts = parts.map(scale.bind(null, max, min));
-      var x1 = 0, y1 = 0, x2 = 0, y2 = 100 - parts[0];
+      var x1 = 0, y1 = 0, x2 = 0, y2 = 100 - parts[0], div = 100 / parts.length;
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
         x1 = x2; y1 = y2;
-        x2 = 100 * (i / parts.length);
+        x2 = 100 * (i / parts.length) + (i * div / parts.length);
         y2 = 100 - parts[i];
         ln.setAttribute("x1", x1 + "%");
         ln.setAttribute("x2", x2 + "%");
