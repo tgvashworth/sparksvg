@@ -10,7 +10,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 
 ### line.svg
 
-```
+```html
 <embed src="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
@@ -18,7 +18,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 
 ### bar.svg
 
-```
+```html
 <embed src="//sparksvg.me/bar.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
@@ -28,7 +28,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 
 The `circle.svg` redraws itself when the page is resized, so it's always looking smart.
 
-```
+```html
 <embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
