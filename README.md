@@ -26,7 +26,7 @@ SVG sparklines, like [this one](http://sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,
 <embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0"></embed>
 ```
 
-![Example Circle SVG](http://i.phuu.net/Lz72/Screen%20Shot%202013-01-06%20at%2019.36.30.png)
+![Example Circle SVG](http://i.phuu.net/Lyym/Screen%20Shot%202013-01-06%20at%2020.41.46.png)
 
 ## License
 
