@@ -97,7 +97,7 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
 - 4.3.2 (via browserstack)
   - Mobile Safari
 
-## Android
+### Android
 
 - 4.0
   - Browser
