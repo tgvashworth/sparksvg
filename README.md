@@ -26,7 +26,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 
 ### circle.svg
 
-The `circle.svg` redraws itself when the page is resized, so it's always looking smart.
+The `circle.svg` redraws itself when the page is resized, so it's always looking smart. Excepting in buggy Firefox, where it can't get its height properly and tries to guess.
 
 ```html
 <embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml"></embed>
@@ -34,7 +34,7 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 
 ![Example Circle SVG](http://i.phuu.net/Lyym/Screen%20Shot%202013-01-06%20at%2020.41.46.png)
 
-## Tested in
+## Tested & working in
 
 ### OSX 10.8.2
 
@@ -49,6 +49,40 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 - Opera
   - 12.11
   - Next 12.50 internal
+
+### Windows XP (via browserstack)
+
+- Chrome
+  - 23.0
+  - 24.0
+- Firefox
+  - 16.0
+  - 17.0 beta
+- Safari
+  - 5.1
+- Opera
+  - 12.10
+
+### Windows 7 (via browserstack)
+
+- IE
+  - 9
+- Chrome
+  - 23.0
+  - 24.0
+- Firefox
+  - 16.0
+  - 17.0 beta
+- Safari
+  - 5.1
+- Opera
+  - 12.10
+
+### Windows 8 (via browserstack)
+
+- IE
+  - 10.0
+  - 10.0 metro **using <object> doesn't work - recommending <embed>**
 
 ## License
 
