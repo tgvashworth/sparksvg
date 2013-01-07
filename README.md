@@ -82,7 +82,7 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 
 - IE
   - 10.0
-  - 10.0 metro **using <object> doesn't work - recommending <embed>**
+  - 10.0 metro **using `<object>` doesn't work - recommending `<embed>`**`
 
 ## License
 
