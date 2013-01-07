@@ -5,8 +5,8 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      xmlns:ev="http://www.w3.org/2001/xml-events"
      width="100%" height="100%"
-     onload='draw()'
-     onresize="clear();">
+     onload="draw()"
+     onresize="clear()">
   <script><![CDATA[
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function limit(max, min, num) {return num > max ? max : num < min ? min : num;}
@@ -29,17 +29,21 @@
           min = Math.min.apply(null, parts);
       parts = parts.map(scale.bind(null, max, min));
       var div = 100 / parts.length,
-          divInPx = elem.clientWidth / parts.length,
-          heightR = (elem.clientHeight - 2) / 2,
-          maxR = divInPx > heightR ? heightR : divInPx;
+          width = elem.clientWidth || elem.offsetWidth,
+          height = elem.clientHeight || elem.offsetHeight,
+          usePercent = !width,
+          divInPx = width / parts.length,
+          heightR = (height - 2) / 2,
+          maxR = divInPx > heightR ? heightR : divInPx,
           cy = 50;
+      maxR = usePercent ? div : maxR;
       for (var i=0; i < parts.length; i++) {
         var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         var cx = (i * div) + (div / 2),
             r = maxR * (parts[i] / 100);
         circle.setAttribute("cx", cx + "%");
         circle.setAttribute("cy", cy + "%");
-        circle.setAttribute("r", r + "px");
+        circle.setAttribute("r", r + (usePercent ? "%" : "px"));
         circle.setAttribute("fill", "rgba(0,0,0,.5)");
         circle.setAttribute("stroke", "rgba(0,0,0,.2)");
         elem.appendChild(circle);
