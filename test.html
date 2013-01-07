@@ -4,74 +4,86 @@
 <meta name="viewport" content="width=device-width">
 
 <style>
-
   * {
     box-sizing: border-box;
   }
-  
   body {
     font: 17px/1.5 sans-serif;
     color: #222;
     margin: 10%;
   }
-  
   object, embed {
     height: 2em;
     width: 100%;
   }
-
   .box {
     margin: 0 0 1em;
   }
-  
 </style>
 
 <div class="box">
   <h2>line</h2>
+
   <h3>object</h3>
   <object data="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></object>
+
   <h3>embed (w. type)</h3>
   <embed src="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></embed>
+
   <h3>embed (wo. type)</h3>
   <embed src="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0"></embed>
+
   <h3>embed (w. type) in object</h3>
   <object data="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml">
     <embed src="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></embed>
   </object>
+
   <h3>embed (wo. type) in object</h3>
   <object data="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml">
     <embed src="line.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0"></embed>
   </object>
 </div>
+
 <div class="box">
   <h2>bar</h2>
+
   <h3>object</h3>
   <object data="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></object>
+
   <h3>embed (w. type)</h3>
   <embed src="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></embed>
+
   <h3>embed (wo. type)</h3>
   <embed src="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0"></embed>
+
   <h3>embed (w. type) in object</h3>
   <object data="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml">
     <embed src="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></embed>
   </object>
+
   <h3>embed (wo. type) in object</h3>
   <object data="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml">
     <embed src="bar.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0"></embed>
   </object>
 </div>
+
 <div class="box">
   <h2>circle</h2>
+
   <h3>object</h3>
   <object data="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></object>
+
   <h3>embed (w. type)</h3>
   <embed src="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></embed>
+
   <h3>embed (wo. type)</h3>
   <embed src="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0"></embed>
+
   <h3>embed (w. type) in object</h3>
   <object data="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml">
     <embed src="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml"></embed>
   </object>
+
   <h3>embed (wo. type) in object</h3>
   <object data="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0" type="image/svg+xml">
     <embed src="circle.svg?0,4,7,10,8,12,5,10,4,7,8,10,14,25,16,9,7,3,0"></embed>

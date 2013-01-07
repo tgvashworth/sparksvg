@@ -36,7 +36,7 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 
 ## Tested & working in
 
-Using the [test page](http://sparksvg.me/test.html). **Please do your own testing and add your results.**
+Using the [test page](http://sparksvg.me/test.html). **Please do your own testing and add your results, particularly on mobile.**
 
 ### OSX 10.8.2
 
@@ -85,6 +85,23 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
 - IE
   - 10.0
   - 10.0 metro **using `<object>` doesn't work - recommending `<embed>`**
+
+### iOS
+
+- 6.0.2
+  - Mobile Safari
+  - Chrome
+    - 23.0
+
+## Android
+
+- 4.0
+  - Browser
+
+## Notably not working
+
+- iOS < 6 :(
+- Android < 4.0
 
 ## License
 
