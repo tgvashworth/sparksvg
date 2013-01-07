@@ -36,7 +36,7 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 
 ## Tested & working in
 
-Using the [test page](http://sparksvg.me/test.html). **Feel free to do your own testing.**
+Using the [test page](http://sparksvg.me/test.html). **Please do your own testing and add your results.**
 
 ### OSX 10.8.2
 
