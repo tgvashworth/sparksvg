@@ -92,6 +92,10 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
   - Mobile Safari
   - Chrome
     - 23.0
+- 5.1 (via browserstack)
+  - Mobile Safari
+- 4.3.2 (via browserstack)
+  - Mobile Safari
 
 ## Android
 
@@ -100,7 +104,7 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
 
 ## Notably not working
 
-- iOS < 6 :(
+- iOS < 4.3.2
 - Android < 4.0
 
 ## License

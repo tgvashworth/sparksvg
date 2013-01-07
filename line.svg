@@ -7,6 +7,7 @@
      width="100%" height="100%"
      onload='draw()'>
   <script><![CDATA[
+    if(typeof Array.prototype.map!=="function"){Array.prototype.map=function(a){for(var b=this,c=b.length,d=[],e=0,f;e<b;)d[e]=e in b?a.call(arguments[1],b[e],e++,b):f;return d}};
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
@@ -16,7 +17,8 @@
                   }),
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
-      parts = parts.map(scale.bind(null, max, min));
+      parts = parts.map(function (num) { return scale(max, min, num); });
+      console.log(parts);
       var x1 = 0, y1 = 0, x2 = 0, y2 = 100 - parts[0], div = 100 / parts.length;
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");

@@ -8,6 +8,7 @@
      onload="draw()"
      onresize="clear()">
   <script><![CDATA[
+    if(typeof Array.prototype.map!=="function"){Array.prototype.map=function(a){for(var b=this,c=b.length,d=[],e=0,f;e<b;)d[e]=e in b?a.call(arguments[1],b[e],e++,b):f;return d}};
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function limit(max, min, num) {return num > max ? max : num < min ? min : num;}
     var timeout;
@@ -27,7 +28,7 @@
                   }),
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
-      parts = parts.map(scale.bind(null, max, min));
+      parts = parts.map(function (num) { return scale(max, min, num); });
       var div = 100 / parts.length,
           width = elem.clientWidth || elem.offsetWidth,
           height = elem.clientHeight || elem.offsetHeight,
