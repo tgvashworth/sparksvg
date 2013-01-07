@@ -18,7 +18,6 @@
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
       parts = parts.map(function (num) { return scale(max, min, num); });
-      console.log(parts);
       var x1 = 0, y1 = 0, x2 = 0, y2 = 100 - parts[0], div = 100 / parts.length;
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
