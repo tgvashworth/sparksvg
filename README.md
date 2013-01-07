@@ -11,7 +11,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 ### line.svg
 
 ```html
-<embed src="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0"></embed>
+<object data="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml"></object>
 ```
 
 ![Example Line SVG](http://i.phuu.net/Ly00/Screen%20Shot%202013-01-06%20at%2012.09.42.png)
@@ -19,7 +19,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 ### bar.svg
 
 ```html
-<embed src="//sparksvg.me/bar.svg?0,4,7,10,8,12,9,7,3,0"></embed>
+<object data="//sparksvg.me/bar.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml"></object>
 ```
 
 ![Example Bar SVG](http://i.phuu.net/Ly4g/Screen%20Shot%202013-01-06%20at%2012.52.59.png)
@@ -29,7 +29,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 The `circle.svg` redraws itself when the page is resized, so it's always looking smart.
 
 ```html
-<embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0"></embed>
+<object data="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml"></object>
 ```
 
 ![Example Circle SVG](http://i.phuu.net/Lyym/Screen%20Shot%202013-01-06%20at%2020.41.46.png)
