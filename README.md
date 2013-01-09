@@ -102,6 +102,11 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
 - 4.0
   - Browser
 
+### Blackberry
+
+- 10.0.4.197
+  - Browser
+
 ## Notably not working
 
 - iOS < 4.3.2
