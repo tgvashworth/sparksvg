@@ -14,7 +14,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 <embed src="//sparksvg.me/line.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml">
 ```
 
-![Example Line SVG](http://i.phuu.net/Ly00/Screen%20Shot%202013-01-06%20at%2012.09.42.png)
+> 158 Comments ![Example Line SVG](http://i.phuu.net/M4IW/Screen%20Shot%202013-01-10%20at%2000.09.32.png)
 
 ### bar.svg
 
@@ -22,7 +22,7 @@ Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-
 <embed src="//sparksvg.me/bar.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml">
 ```
 
-![Example Bar SVG](http://i.phuu.net/Ly4g/Screen%20Shot%202013-01-06%20at%2012.52.59.png)
+> 158 Comments ![Example Bar SVG](http://i.phuu.net/M4lr/Screen%20Shot%202013-01-10%20at%2000.11.06.png)
 
 ### circle.svg
 
@@ -32,9 +32,9 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 <embed src="//sparksvg.me/circle.svg?0,4,7,10,8,12,9,7,3,0" type="image/svg+xml">
 ```
 
-![Example Circle SVG](http://i.phuu.net/Lyym/Screen%20Shot%202013-01-06%20at%2020.41.46.png)
+![Example Circle SVG](http://i.phuu.net/M4sv/Screen%20Shot%202013-01-10%20at%2000.13.47.png)
 
-## Tested & working in
+## [Tested](http://sparksvg.me/test.html) & working in...
 
 Using the [test page](http://sparksvg.me/test.html). **Please do your own testing and add your results, particularly on mobile.**
 
