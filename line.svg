@@ -11,10 +11,14 @@
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
-          parts = location.search.substr(1).split(",")
+          search = location.search.substr(1),
+          segments = search.split('&'),
+          parts = segments[0]
+                  .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
+          current = (search.indexOf('current') != -1),
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
       parts = parts.map(function (num) { return scale(max, min, num); });
@@ -28,7 +32,11 @@
         ln.setAttribute("x2", x2 + "%");
         ln.setAttribute("y1", y1 + "%");
         ln.setAttribute("y2", y2 + "%");
-        ln.setAttribute("stroke", "rgba(0,0,0,0.5)");
+        if( current && i+1 === parts.length ) {
+          ln.setAttribute("stroke", "rgba(255,0,0,0.5)");
+        } else {
+          ln.setAttribute("stroke", "rgba(0,0,0,0.5)");
+        }
         ln.setAttribute("stroke-width", "1");
         elem.appendChild(ln);
       }
