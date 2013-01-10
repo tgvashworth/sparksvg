@@ -11,12 +11,28 @@
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
-          parts = location.search.substr(1).split(",")
+          search = location.search.substr(1)
+          segments = search.split('&'),
+          parts = segments[0]
+                  .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
+
+          color = (search.indexOf('color') != -1),
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
+
+      if ( color ) {
+        for (var i=0; i < segments.length; i++) {
+          if (segments[i].indexOf('color') != -1) {
+            var color = "rgba("+segments[i].replace('color','')+")";
+          }
+        }
+      } else {
+        var color = "rgba(0,0,0,0.5)";
+      }
+
       parts = parts.map(function (num) { return scale(max, min, num); });
       var x, y, height, width = 100 / parts.length;
       for (var i=0; i < parts.length; i++) {
@@ -28,8 +44,8 @@
         rect.setAttribute("y", y + "%");
         rect.setAttribute("width", width + "%");
         rect.setAttribute("height", height + "%");
-        rect.setAttribute("fill", "rgba(0,0,0,1)");
-        rect.setAttribute("stroke", "rgba(0,0,0,1)");
+        rect.setAttribute("fill", color);
+        rect.setAttribute("stroke", color);
         elem.appendChild(rect);
       }
     }
