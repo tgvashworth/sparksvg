@@ -11,7 +11,7 @@
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
-          dotSize = 0.6,
+          dotSize = 2,
           search = location.search.substr(1),
           segments = search.split('&'),
           parts = segments[0]
