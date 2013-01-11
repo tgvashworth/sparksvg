@@ -40,11 +40,13 @@ You want to contribute? Get started here...
 
 ### The code
 
-To add a feature, open up the `.svg` in a text editor, where you'll find some javascript in there. Make some changes and submit it as a pull request!
+To add a feature, open up the `.svg` in a text editor, where you'll find some javascript. Make some changes, make it better and submit your work as a pull request!
 
 ### By the way...
 
-This is meant to be a lightweight solution, so please don't add any libraries, and make sure your change works in **all** the working browsers listed below.
+This is meant to be a lightweight solution, so please don't add any libraries, and make sure your change works in **all** the working browsers listed below, by adding a test case to the `test.html`.
+
+If it's a new feature, don't edit any of the existing test cases, add a new one, and try them in combination too. The more testing, the merrier.
 
 ## [Tested](http://sparksvg.me/test.html) & working in...
 
