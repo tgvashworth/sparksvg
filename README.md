@@ -34,6 +34,18 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 
 ![Example Circle SVG](http://i.phuu.net/M4sv/Screen%20Shot%202013-01-10%20at%2000.13.47.png)
 
+## Contributing
+
+You want to contribute? Get started here...
+
+### The code
+
+To add a feature, open up the `.svg` in a text editor, where you'll find some javascript in there. Make some changes and submit it as a pull request!
+
+### By the way...
+
+This is meant to be a lightweight solution, so please don't add any libraries, and make sure your change works in **all** the working browsers listed below.
+
 ## [Tested](http://sparksvg.me/test.html) & working in...
 
 Using the [test page](http://sparksvg.me/test.html). **Please do your own testing and add your results, particularly on mobile.**
