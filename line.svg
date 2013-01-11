@@ -19,23 +19,20 @@
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
-          color = (search.indexOf('color') != -1),
+          color = "rgba(0,0,0,0.5)",
+          show_color = (search.indexOf('rgba:') != -1),
           show_current = (search.indexOf('current') != -1),
           show_min = (search.indexOf('min') != -1),
           show_max = (search.indexOf('max') != -1),
           max = Math.max.apply(null, parts),
           min = Math.min.apply(null, parts);
-
-      if ( color ) {
+      if ( show_color ) {
         for (var i=0; i < segments.length; i++) {
-          if (segments[i].indexOf('color') != -1) {
-            var color = "rgba("+segments[i].replace('color','')+")";
+          if (segments[i].indexOf('rgba:') != -1) {
+            color = "rgba("+segments[i].replace('rgba:','')+")";
           }
         }
-      } else {
-        var color = "rgba(0,0,0,0.5)";
       }
-
       parts = parts.map(function (num) { return scale(max, min, num); });
       var div = 100 / parts.length, x1 = 0, y1 = 0, x2 = div / 2, y2 = 100 - parts[0];
       for (var i=0; i < parts.length; i++) {
