@@ -4,7 +4,7 @@
 
 Mothereffin' SVG sparklines.
 
-Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines), based on an idea from [Jeremy Keith](http://adactio.com/journal/5941/).
+Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines), based on [Jeremy Keith's](http://adactio.com/journal/5941/) idea.
 
 ## Basic usage
 
@@ -127,8 +127,6 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
 - Android < 4.0
 
 ## License
-
-Copyright (c) 2012 Stuart Langridge & Tom Ashworth
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
