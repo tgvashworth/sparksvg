@@ -11,13 +11,13 @@
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
-          parts = location.search.substr(1).split(",")
+          data = location.search.substr(1).split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
-          max = Math.max.apply(null, parts),
-          min = Math.min.apply(null, parts);
-      parts = parts.map(function (num) { return scale(max, min, num); });
+          max = Math.max.apply(null, data),
+          min = Math.min.apply(null, data);
+      parts = data.map(function (num) { return scale(max, min, num); });
       var x1 = 0, y1 = 0, x2 = 0, y2 = 100 - parts[0], div = 100 / parts.length;
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
