@@ -24,13 +24,13 @@
       var elem = document.getElementsByTagName("svg")[0],
           search = location.search.substr(1)
           segments = search.split('&')
-          parts = segments[0]
+          data = segments[0]
                   .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
-          max = Math.max.apply(null, parts),
-          min = Math.min.apply(null, parts);
+          max = Math.max.apply(null, data),
+          min = Math.min.apply(null, data);
           color = "rgba(0,0,0,0.6)",
           show_color = (search.indexOf('rgba:') != -1);
       if ( show_color ) {
@@ -40,8 +40,8 @@
           }
         }
       }
-      parts = parts.map(function (num) { return scale(max, min, num); });
-      var div = 100 / parts.length,
+      var parts = data.map(function (num) { return scale(max, min, num); }),
+          div = 100 / parts.length,
           width = elem.clientWidth || elem.offsetWidth,
           height = elem.clientHeight || elem.offsetHeight,
           usePercent = !width,
@@ -54,6 +54,7 @@
         var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         var cx = (i * div) + (div / 2),
             r = maxR * (parts[i] / 100);
+        circle.setAttribute("title", data[i]);
         circle.setAttribute("cx", cx + "%");
         circle.setAttribute("cy", cy + "%");
         circle.setAttribute("r", r + (usePercent ? "%" : "px"));

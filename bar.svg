@@ -13,15 +13,15 @@
       var elem = document.getElementsByTagName("svg")[0],
           search = location.search.substr(1)
           segments = search.split('&'),
-          parts = segments[0]
+          data = segments[0]
                   .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
           color = "rgba(0,0,0,0.8)",
           show_color = (search.indexOf('rgba:') != -1),
-          max = Math.max.apply(null, parts),
-          min = Math.min.apply(null, parts);
+          max = Math.max.apply(null, data),
+          min = Math.min.apply(null, data);
       if ( show_color ) {
         for (var i=0; i < segments.length; i++) {
           if (segments[i].indexOf('rgba:') != -1) {
@@ -29,13 +29,14 @@
           }
         }
       }
-      parts = parts.map(function (num) { return scale(max, min, num); });
-      var x, y, height, width = 100 / parts.length;
+      var parts = data.map(function (num) { return scale(max, min, num); }),
+          x, y, height, width = 100 / parts.length;
       for (var i=0; i < parts.length; i++) {
         var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         x = 100 * (i / parts.length);
         y = 100 - parts[i];
         height = parts[i] + 1;
+        rect.setAttribute("title", data[i]);
         rect.setAttribute("x", x + "%");
         rect.setAttribute("y", y + "%");
         rect.setAttribute("width", width + "%");

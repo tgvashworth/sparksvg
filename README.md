@@ -4,7 +4,7 @@
 
 Mothereffin' SVG sparklines.
 
-Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines), based on an idea from [Jeremy Keith](http://adactio.com/journal/5941/).
+Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines), based on [Jeremy Keith's](http://adactio.com/journal/5941/) idea.
 
 ## Basic usage
 
@@ -33,6 +33,20 @@ The `circle.svg` redraws itself when the page is resized, so it's always looking
 ```
 
 ![Example Circle SVG](http://i.phuu.net/M4sv/Screen%20Shot%202013-01-10%20at%2000.13.47.png)
+
+## Contributing
+
+You want to contribute? Get started here...
+
+### The code
+
+To add a feature, open up the `.svg` in a text editor, where you'll find some javascript. Make some changes, make it better and submit your work as a pull request!
+
+### By the way...
+
+This is meant to be a lightweight solution, so please don't add any libraries, and make sure your change works in **all** the working browsers listed below, by adding a test case to the `test.html`.
+
+If it's a new feature, don't edit any of the existing test cases, add a new one, and try them in combination too. The more testing, the merrier.
 
 ## [Tested](http://sparksvg.me/test.html) & working in...
 
@@ -113,8 +127,6 @@ Using the [test page](http://sparksvg.me/test.html). **Please do your own testin
 - Android < 4.0
 
 ## License
-
-Copyright (c) 2012 Stuart Langridge & Tom Ashworth
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

@@ -14,7 +14,7 @@
           dotSize = 2,
           search = location.search.substr(1),
           segments = search.split('&'),
-          parts = segments[0]
+          data = segments[0]
                   .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
@@ -24,8 +24,8 @@
           show_current = (search.indexOf('current') != -1),
           show_min = (search.indexOf('min') != -1),
           show_max = (search.indexOf('max') != -1),
-          max = Math.max.apply(null, parts),
-          min = Math.min.apply(null, parts);
+          max = Math.max.apply(null, data),
+          min = Math.min.apply(null, data);
       if ( show_color ) {
         for (var i=0; i < segments.length; i++) {
           if (segments[i].indexOf('rgba:') != -1) {
@@ -33,8 +33,9 @@
           }
         }
       }
-      parts = parts.map(function (num) { return scale(max, min, num); });
-      var div = 100 / parts.length, x1 = 0, y1 = 0, x2 = div / 2, y2 = 100 - parts[0];
+      var parts = data.map(function (num) { return scale(max, min, num); }),
+          div = 100 / parts.length,
+          x1 = 0, y1 = 0, x2 = div / 2, y2 = 100 - parts[0];
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
         x1 = x2; y1 = y2;
