@@ -19,6 +19,7 @@
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
+          range = 96,
           color = "rgba(0,0,0,0.5)",
           show_color = (search.indexOf('rgba:') != -1),
           show_current = (search.indexOf('current') != -1),
@@ -35,12 +36,12 @@
       }
       var parts = data.map(function (num) { return scale(max, min, num); }),
           div = 100 / parts.length,
-          x1 = 0, y1 = 0, x2 = div / 2, y2 = 100 - parts[0];
+          x1 = 0, y1 = 0, x2 = div / 2, y2 = range - parts[0];
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
         x1 = x2; y1 = y2;
-        x2 = 100 * (i / parts.length) + (div / 2);
-        y2 = 100 - parts[i];
+        x2 = range * (i / parts.length) + (div / 2);
+        y2 = range - parts[i];
         ln.setAttribute("x1", x1 + "%");
         ln.setAttribute("x2", x2 + "%");
         ln.setAttribute("y1", y1 + "%");
