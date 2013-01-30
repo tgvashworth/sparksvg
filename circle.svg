@@ -22,14 +22,26 @@
     }
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
-          data = location.search.substr(1).split(",")
+          search = location.search.substr(1)
+          segments = search.split('&')
+          data = segments[0]
+                  .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
           max = Math.max.apply(null, data),
           min = Math.min.apply(null, data);
-      parts = data.map(function (num) { return scale(max, min, num); });
-      var div = 100 / parts.length,
+          color = "rgba(0,0,0,0.6)",
+          show_color = (search.indexOf('rgba:') != -1);
+      if ( show_color ) {
+        for (var i=0; i < segments.length; i++) {
+          if (segments[i].indexOf('rgba:') != -1) {
+            color = "rgba("+segments[i].replace('rgba:','')+")";
+          }
+        }
+      }
+      var parts = data.map(function (num) { return scale(max, min, num); }),
+          div = 100 / parts.length,
           width = elem.clientWidth || elem.offsetWidth,
           height = elem.clientHeight || elem.offsetHeight,
           usePercent = !width,
@@ -46,8 +58,7 @@
         circle.setAttribute("cx", cx + "%");
         circle.setAttribute("cy", cy + "%");
         circle.setAttribute("r", r + (usePercent ? "%" : "px"));
-        circle.setAttribute("fill", "rgba(0,0,0,.5)");
-        circle.setAttribute("stroke", "rgba(0,0,0,.2)");
+        circle.setAttribute("fill", color);
         elem.appendChild(circle);
       }
     }
