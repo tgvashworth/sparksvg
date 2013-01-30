@@ -11,26 +11,74 @@
     function scale(max, min, num) {return (100 * (num - min) / (max - min)) || 0;}
     function draw() {
       var elem = document.getElementsByTagName("svg")[0],
-          data = location.search.substr(1).split(",")
+          dotSize = 2,
+          search = location.search.substr(1),
+          segments = search.split('&'),
+          data = segments[0]
+                  .split(",")
                   .map(function (n) {
                     return parseFloat(n, 10) || 0;
                   }),
+          range = 96,
+          color = "rgba(0,0,0,0.5)",
+          show_color = (search.indexOf('rgba:') != -1),
+          show_current = (search.indexOf('current') != -1),
+          show_min = (search.indexOf('min') != -1),
+          show_max = (search.indexOf('max') != -1),
           max = Math.max.apply(null, data),
           min = Math.min.apply(null, data);
-      parts = data.map(function (num) { return scale(max, min, num); });
-      var x1 = 0, y1 = 0, x2 = 0, y2 = 100 - parts[0], div = 100 / parts.length;
+      if ( show_color ) {
+        for (var i=0; i < segments.length; i++) {
+          if (segments[i].indexOf('rgba:') != -1) {
+            color = "rgba("+segments[i].replace('rgba:','')+")";
+          }
+        }
+      }
+      var parts = data.map(function (num) { return scale(max, min, num); }),
+          div = 100 / parts.length,
+          x1 = 0, y1 = 0, x2 = div / 2, y2 = range - parts[0];
       for (var i=0; i < parts.length; i++) {
         var ln = document.createElementNS("http://www.w3.org/2000/svg", "line");
         x1 = x2; y1 = y2;
-        x2 = 100 * (i / parts.length) + (i * div / parts.length);
-        y2 = 100 - parts[i];
+        x2 = range * (i / parts.length) + (div / 2);
+        y2 = range - parts[i];
         ln.setAttribute("x1", x1 + "%");
         ln.setAttribute("x2", x2 + "%");
         ln.setAttribute("y1", y1 + "%");
         ln.setAttribute("y2", y2 + "%");
-        ln.setAttribute("stroke", "rgba(0,0,0,0.5)");
+        ln.setAttribute("stroke", color);
         ln.setAttribute("stroke-width", "1");
         elem.appendChild(ln);
+        if( show_current && i+1 === parts.length ) {
+          var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("cx", x2 - dotSize + "%");
+          circle.setAttribute("cy", y2 + "%");
+          circle.setAttribute("r", dotSize + "%");
+          circle.setAttribute("fill", "rgba(255,0,0,1)");
+          circle.setAttribute("stroke", "rgba(255,0,0,.2)");
+          elem.appendChild(circle);
+        }
+        if( show_max && parts[i] === 100 ) {
+          var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          circle.setAttribute("cx", x2 + "%");
+          circle.setAttribute("cy", 3 + "%");
+          circle.setAttribute("r", dotSize + "%");
+          circle.setAttribute("fill", "rgba(0,150,0,1)");
+          circle.setAttribute("stroke", "rgba(0,150,0,1)");
+          elem.appendChild(circle);
+        }
+        if( show_min && parts[i] === 0) {
+          if( i > 0 && parts[i - 1] === 0 ) { /* ignore, only show min once */ }
+          else {
+            var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            circle.setAttribute("cx", x2 + "%");
+            circle.setAttribute("cy", 97 + "%");
+            circle.setAttribute("r", dotSize + "%");
+            circle.setAttribute("fill", "rgba(0,150,0,1)");
+            circle.setAttribute("stroke", "rgba(0,150,0,1)");
+            elem.appendChild(circle);
+          }
+        }
       }
     }
   ]]></script>
