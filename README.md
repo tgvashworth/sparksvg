@@ -1,8 +1,8 @@
-# Spark SVG — [sparksvg.me](http://sparksvg.me)
+# Spark SVG — [sparksvg.me](http://sparksvg.me/test.html)
 
 ![OMG Sparklines](http://i.phuu.net/Lz7N/Screen%20Shot%202013-01-06%20at%2021.03.15.png)
 
-Mothereffin' SVG sparklines.
+Mothereffin' SVG sparklines. Check out the [demo/test page](http://sparksvg.me/test.html).
 
 Orignally by [Stuart Langridge](http://kryogenix.org/days/2012/12/30/simple-svg-sparklines), based on [Jeremy Keith's](http://adactio.com/journal/5941/) idea.
 
